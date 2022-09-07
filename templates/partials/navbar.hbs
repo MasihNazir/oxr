@@ -1,0 +1,89 @@
+<!-- Spinner Start -->
+<div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<!-- Spinner End -->
+
+
+<!-- Topbar Start -->
+<div class="container-fluid bg-light p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                <small>Tokyo, Japan</small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center py-3">
+                <small class="far fa-clock text-primary me-2"></small>
+                <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+            </div>
+        </div>
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                <small class="fa fa-phone-alt text-primary me-2"></small>
+                <small>+80 345 6789</small>
+            </div>
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+{{#if session.message}}
+<div class="container">
+    <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+        <strong>Success! </strong> {{session.message.message}}.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+{{/if}}
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="/" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <img src="/img/sample-logo-2.png" alt="Omaid co., ltd logo">
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="/" class="nav-item nav-link  {{#if home}}active{{/if}} ">Home</a>
+            <a href="/about" class="nav-item nav-link {{#if about}} active{{/if}}">About</a>
+
+            <div class="nav-item dropdown">
+                <a href="/recycling" class="nav-link dropdown-toggle  {{#if recycling}}active{{/if}}"
+                    data-bs-toggle="dropdown">Car Recycling
+                </a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="/recycling" class="dropdown-item ">Recycling</a>
+                    <a href="/recycling/parts" class="dropdown-item ">Parts</a>
+                    <a href="/recycling/pickuprequest" class="dropdown-item">Vehicle Pickup Request</a>
+                    <a href="/recycling/whytorecycle" class="dropdown-item">Why to Recycle</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="/exports" class="nav-link dropdown-toggle  {{#if exports}}active{{/if}}"
+                    data-bs-toggle="dropdown">Exports</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a href="/exports/car-carrier" class="dropdown-item">Car Carrier</a>
+                    <a href="/exports/container-shipping" class="dropdown-item">Container Shipping</a>
+                    <a href="/exports/customs-clearance" class="dropdown-item">Customs Clearance</a>
+
+                </div>
+            </div>
+            <a href="/usedcars" class="nav-item nav-link {{#if usedcar}}active{{/if}}">Used Cars</a>
+            <a href="/contact" class="nav-item nav-link  {{#if contact}}active{{/if}}">Contact</a>
+        </div>
+        <a href="/recycling/pickuprequest" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Pick up Request<i
+                class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->

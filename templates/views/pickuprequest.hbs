@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>OXR | Pickup Request </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="/img/icon/favicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+    {{!-- form css --}}
+    <link href="/css/form1.css" rel="stylesheet">
+    <script src="/js/form1.js"></script>
+</head>
+
+<body>
+    {{>navbar}}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(/img/car-carrier.jpeg);">
+        <div class="container-fluid page-header-inner py-5">
+            <div class="container text-center">
+                <h1 class="display-3 text-white mb-3 animated slideInDown">vehicle pickup Request</h1>
+                <nav aria-label="breadcrumb">
+
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <div class="container mt-5">
+        <h1></h1>
+        <p></p>
+    </div>
+    <div class="container mt-5">
+        <h1>Please fill in your request information</h1>
+        <form action="/recycling/pickuprequest" enctype="multipart/form-data" method="post" class="row g-3">
+            <div class="col-md-4">
+                <label for="name" class="form-label">Name</label>
+                <input name="name" type="name" class="form-control" id="name">
+            </div>
+            <div class="col-md-4">
+                <label for="email" class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" id="email">
+            </div>
+            <div class="col-md-4">
+                <label for="Phone" class="form-label">Phone</label>
+                <input name="phone" type="number" class="form-control" id="phone">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Manufacturar</label>
+                <input name="manufacturar" class="form-control" list="datalistOptions" id="exampleDataList"
+                    placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option style="background-image:url(/img/car-brands/toyota-logo.png);" value="Toyota">
+                    <option value="Benz">
+                    <option value="BMW">
+                    <option value="Honda">
+                    <option value="Hyundai">
+                </datalist>
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Model</label>
+                <input name="model" type="text" class="form-control" id="inputAddress" placeholder="Luxus 2007">
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">milage</label>
+                <input name="milage" type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+
+                <label for="formFile" class="form-label">Please select a photo of your vehicle</label>
+                <input name="image" class="form-control" type="file" id="formFile">
+
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+    {{>footer}}

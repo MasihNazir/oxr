@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
-mongoose.connect(process.env.DB_CONNECT, {
+mongoose.connect('mongodb+srv://masihnazir:CrMmgcPbu6Gkyji4@cluster0.z5gimen.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     family: 4,

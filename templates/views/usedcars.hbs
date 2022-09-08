@@ -150,7 +150,9 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
                 {{#each data}}
-                <div class="col">
+
+                <div class="col wow fadeInUp" data-wow-delay="0.{{@index}}s">
+
                     <div class="card shadow-sm">
                         <img src="/{{images.[0]}}" class="img-fluid" alt="">
                         <div class="card-body">

@@ -34,6 +34,12 @@
     {{!-- form css --}}
     <link href="/css/form1.css" rel="stylesheet">
     <script src="/js/form1.js"></script>
+    <style>
+        .myDropDown {
+            height: 50px;
+            overflow: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -59,40 +65,91 @@
         <form action="/recycling/pickuprequest" enctype="multipart/form-data" method="post" class="row g-3">
             <div class="col-md-4">
                 <label for="name" class="form-label">Name</label>
-                <input name="name" type="name" class="form-control" id="name">
+                <input name="name" type="name" class="form-control" id="name" required>
             </div>
             <div class="col-md-4">
                 <label for="email" class="form-label">Email</label>
-                <input name="email" type="email" class="form-control" id="email">
+                <input name="email" type="email" class="form-control" id="email" required>
             </div>
             <div class="col-md-4">
                 <label for="Phone" class="form-label">Phone</label>
-                <input name="phone" type="number" class="form-control" id="phone">
+                <input name="phone" type="number" class="form-control" id="phone" required>
             </div>
             <div class="col-12">
                 <label for="inputAddress" class="form-label">Address</label>
-                <input name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <input name="address" type="text" class="form-control" required id="inputAddress"
+                    placeholder="1234 Main St">
             </div>
 
             <div class="col-md-6">
-                <label for="inputCity" class="form-label">Manufacturar</label>
-                <input name="manufacturar" class="form-control" list="datalistOptions" id="exampleDataList"
+                <label for="imageSelect" class="form-label">Manufacturar</label>
+                {{!-- <input name="manufacturar" class="form-control" list="datalistOptions" id="exampleDataList"
                     placeholder="Type to search...">
                 <datalist id="datalistOptions">
-                    <option style="background-image:url(/img/car-brands/toyota-logo.png);" value="Toyota">
+                    <option value="Toyota">
                     <option value="Benz">
                     <option value="BMW">
                     <option value="Honda">
                     <option value="Hyundai">
-                </datalist>
+                </datalist> --}}
+                <select id="imageSelect" name="manufacturar" class="form-select myDropDown">
+
+                    <option value="Toyota" data-imagesrc="/img/car-brands/toyota.png" data-description="No Discription">
+                        Toyota
+                    </option>
+                    <option value="Honda" data-imagesrc="/img/car-brands/honda.png" data-description="No Discription">
+                        Honda
+                    </option>
+                    <option value="Mazda" data-imagesrc="/img/car-brands/mazda.png" data-description="No Discription">
+                        Mazda
+                    </option>
+                    <option value="Mitsubishi" data-imagesrc="/img/car-brands/mitsubishi.png"
+                        data-description="No Discription">
+                        Mitsubishi
+                    </option>
+                    <option value="Nissan" data-imagesrc="/img/car-brands/nissan.png" data-description="No Discription">
+                        Nissan
+                    </option>
+                    <option value="Subaru" data-imagesrc="/img/car-brands/subaru.png" data-description="No Discription">
+                        Subaru
+                    </option>
+                    <option value="Suzuki" data-imagesrc="/img/car-brands/suzuki.png" data-description="No Discription">
+                        Suzuki
+                    </option>
+                    {{!-- test options --}}
+                    <option value="Toyota" data-imagesrc="/img/car-brands/toyota.png" data-description="No Discription">
+                        Toyota
+                    </option>
+                    <option value="Honda" data-imagesrc="/img/car-brands/honda.png" data-description="No Discription">
+                        Honda
+                    </option>
+                    <option value="Mazda" data-imagesrc="/img/car-brands/mazda.png" data-description="No Discription">
+                        Mazda
+                    </option>
+                    <option value="Mitsubishi" data-imagesrc="/img/car-brands/mitsubishi.png"
+                        data-description="No Discription">
+                        Mitsubishi
+                    </option>
+                    <option value="Nissan" data-imagesrc="/img/car-brands/nissan.png" data-description="No Discription">
+                        Nissan
+                    </option>
+                    <option value="Subaru" data-imagesrc="/img/car-brands/subaru.png" data-description="No Discription">
+                        Subaru
+                    </option>
+                    <option value="Suzuki" data-imagesrc="/img/car-brands/suzuki.png" data-description="No Discription">
+                        Suzuki
+                    </option>
+                    {{!-- test option end --}}
+                </select>
             </div>
             <div class="col-md-4">
                 <label for="inputState" class="form-label">Model</label>
-                <input name="model" type="text" class="form-control" id="inputAddress" placeholder="Luxus 2007">
+                <input name="model" type="text" required class="form-control" id="inputAddress"
+                    placeholder="Luxus 2007">
             </div>
             <div class="col-md-2">
                 <label for="inputZip" class="form-label">milage</label>
-                <input name="milage" type="text" class="form-control" id="inputZip">
+                <input name="milage" type="text" required class="form-control" id="inputZip">
             </div>
             <div class="col-12">
 

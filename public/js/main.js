@@ -131,4 +131,9 @@ $(".car-carousel").owlCarousel({
     }
 });
 
+$("#imageSelect").ddslick({
+    imagePosition: 'left',
+    width: "100%",
+});
+
 
